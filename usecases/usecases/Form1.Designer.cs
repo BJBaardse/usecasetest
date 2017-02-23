@@ -63,7 +63,7 @@
             // rabActor
             // 
             this.rabActor.AutoSize = true;
-            this.rabActor.Location = new System.Drawing.Point(6, 45);
+            this.rabActor.Location = new System.Drawing.Point(6, 48);
             this.rabActor.Name = "rabActor";
             this.rabActor.Size = new System.Drawing.Size(62, 21);
             this.rabActor.TabIndex = 1;
@@ -74,7 +74,7 @@
             // rabLine
             // 
             this.rabLine.AutoSize = true;
-            this.rabLine.Location = new System.Drawing.Point(6, 72);
+            this.rabLine.Location = new System.Drawing.Point(6, 75);
             this.rabLine.Name = "rabLine";
             this.rabLine.Size = new System.Drawing.Size(56, 21);
             this.rabLine.TabIndex = 2;
