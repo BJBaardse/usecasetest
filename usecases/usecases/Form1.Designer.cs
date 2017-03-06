@@ -34,9 +34,11 @@
             this.rabLine = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rabMove = new System.Windows.Forms.RadioButton();
+            this.rabDelete = new System.Windows.Forms.RadioButton();
             this.rabSelect = new System.Windows.Forms.RadioButton();
             this.rabAdd = new System.Windows.Forms.RadioButton();
+            this.btnR = new System.Windows.Forms.Button();
+            this.btnRLines = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +51,7 @@
             this.canvas.Size = new System.Drawing.Size(687, 355);
             this.canvas.TabIndex = 0;
             this.canvas.Click += new System.EventHandler(this.canvas_Click);
+            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
             // 
             // rabUseCase
             // 
@@ -97,7 +100,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rabMove);
+            this.groupBox2.Controls.Add(this.rabDelete);
             this.groupBox2.Controls.Add(this.rabSelect);
             this.groupBox2.Controls.Add(this.rabAdd);
             this.groupBox2.Location = new System.Drawing.Point(179, 13);
@@ -107,16 +110,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modes";
             // 
-            // rabMove
+            // rabDelete
             // 
-            this.rabMove.AutoSize = true;
-            this.rabMove.Location = new System.Drawing.Point(7, 76);
-            this.rabMove.Name = "rabMove";
-            this.rabMove.Size = new System.Drawing.Size(63, 21);
-            this.rabMove.TabIndex = 0;
-            this.rabMove.TabStop = true;
-            this.rabMove.Text = "Move";
-            this.rabMove.UseVisualStyleBackColor = true;
+            this.rabDelete.AutoSize = true;
+            this.rabDelete.Location = new System.Drawing.Point(7, 76);
+            this.rabDelete.Name = "rabDelete";
+            this.rabDelete.Size = new System.Drawing.Size(70, 21);
+            this.rabDelete.TabIndex = 0;
+            this.rabDelete.TabStop = true;
+            this.rabDelete.Text = "Delete";
+            this.rabDelete.UseVisualStyleBackColor = true;
             // 
             // rabSelect
             // 
@@ -140,11 +143,33 @@
             this.rabAdd.Text = "Add";
             this.rabAdd.UseVisualStyleBackColor = true;
             // 
+            // btnR
+            // 
+            this.btnR.Location = new System.Drawing.Point(624, 13);
+            this.btnR.Name = "btnR";
+            this.btnR.Size = new System.Drawing.Size(75, 23);
+            this.btnR.TabIndex = 5;
+            this.btnR.Text = "Reset";
+            this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.btnR_Click);
+            // 
+            // btnRLines
+            // 
+            this.btnRLines.Location = new System.Drawing.Point(571, 42);
+            this.btnRLines.Name = "btnRLines";
+            this.btnRLines.Size = new System.Drawing.Size(128, 23);
+            this.btnRLines.TabIndex = 5;
+            this.btnRLines.Text = "Remove Lines";
+            this.btnRLines.UseVisualStyleBackColor = true;
+            this.btnRLines.Click += new System.EventHandler(this.btnRLines_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 491);
+            this.Controls.Add(this.btnRLines);
+            this.Controls.Add(this.btnR);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.canvas);
@@ -166,9 +191,11 @@
         private System.Windows.Forms.RadioButton rabLine;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rabMove;
+        private System.Windows.Forms.RadioButton rabDelete;
         private System.Windows.Forms.RadioButton rabSelect;
         private System.Windows.Forms.RadioButton rabAdd;
+        private System.Windows.Forms.Button btnR;
+        private System.Windows.Forms.Button btnRLines;
     }
 }
 

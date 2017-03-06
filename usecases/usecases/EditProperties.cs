@@ -19,9 +19,25 @@ namespace usecases
         public string Beschrijving;
         public string Uitzonderingen;
         public string Resultaat;
-        public EditProperties()
+        public Point plaats;
+        public EditProperties(Point _plaats)
         {
             InitializeComponent();
+            plaats = _plaats;
+        }
+        public EditProperties(UseCase a)
+        {
+            InitializeComponent();
+            List<string> strings = new List<string>();
+            plaats = a.plaats;
+            strings = a.getprops();
+            tbNaam.Text = strings[0];
+            tbSamenvatting.Text = strings[1];
+            tbActoren.Text = strings[2];
+            tbAannamen.Text = strings[3];
+            tbBeschrijving.Text = strings[4];
+            tbUitzonderingen.Text = strings[5];
+            tbResultaat.Text = strings[6];
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -33,6 +49,7 @@ namespace usecases
             Beschrijving = tbBeschrijving.Text;
             Uitzonderingen = tbUitzonderingen.Text;
             Resultaat = tbResultaat.Text;
+            this.Hide();
         }
     }
 }
