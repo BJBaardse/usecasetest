@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.canvas = new System.Windows.Forms.Panel();
             this.rabUseCase = new System.Windows.Forms.RadioButton();
             this.rabActor = new System.Windows.Forms.RadioButton();
             this.rabLine = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rabAdd = new System.Windows.Forms.RadioButton();
-            this.rabSelect = new System.Windows.Forms.RadioButton();
             this.rabMove = new System.Windows.Forms.RadioButton();
+            this.rabSelect = new System.Windows.Forms.RadioButton();
+            this.rabAdd = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // canvas
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(12, 124);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 355);
-            this.panel1.TabIndex = 0;
+            this.canvas.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.canvas.Location = new System.Drawing.Point(12, 124);
+            this.canvas.Name = "canvas";
+            this.canvas.Size = new System.Drawing.Size(687, 355);
+            this.canvas.TabIndex = 0;
+            this.canvas.Click += new System.EventHandler(this.canvas_Click);
             // 
             // rabUseCase
             // 
@@ -106,16 +107,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modes";
             // 
-            // rabAdd
+            // rabMove
             // 
-            this.rabAdd.AutoSize = true;
-            this.rabAdd.Location = new System.Drawing.Point(7, 22);
-            this.rabAdd.Name = "rabAdd";
-            this.rabAdd.Size = new System.Drawing.Size(54, 21);
-            this.rabAdd.TabIndex = 0;
-            this.rabAdd.TabStop = true;
-            this.rabAdd.Text = "Add";
-            this.rabAdd.UseVisualStyleBackColor = true;
+            this.rabMove.AutoSize = true;
+            this.rabMove.Location = new System.Drawing.Point(7, 76);
+            this.rabMove.Name = "rabMove";
+            this.rabMove.Size = new System.Drawing.Size(63, 21);
+            this.rabMove.TabIndex = 0;
+            this.rabMove.TabStop = true;
+            this.rabMove.Text = "Move";
+            this.rabMove.UseVisualStyleBackColor = true;
             // 
             // rabSelect
             // 
@@ -128,16 +129,16 @@
             this.rabSelect.Text = "Select / Edit";
             this.rabSelect.UseVisualStyleBackColor = true;
             // 
-            // rabMove
+            // rabAdd
             // 
-            this.rabMove.AutoSize = true;
-            this.rabMove.Location = new System.Drawing.Point(7, 76);
-            this.rabMove.Name = "rabMove";
-            this.rabMove.Size = new System.Drawing.Size(63, 21);
-            this.rabMove.TabIndex = 0;
-            this.rabMove.TabStop = true;
-            this.rabMove.Text = "Move";
-            this.rabMove.UseVisualStyleBackColor = true;
+            this.rabAdd.AutoSize = true;
+            this.rabAdd.Location = new System.Drawing.Point(7, 22);
+            this.rabAdd.Name = "rabAdd";
+            this.rabAdd.Size = new System.Drawing.Size(54, 21);
+            this.rabAdd.TabIndex = 0;
+            this.rabAdd.TabStop = true;
+            this.rabAdd.Text = "Add";
+            this.rabAdd.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -146,7 +147,7 @@
             this.ClientSize = new System.Drawing.Size(711, 491);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.canvas);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -159,7 +160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel canvas;
         private System.Windows.Forms.RadioButton rabUseCase;
         private System.Windows.Forms.RadioButton rabActor;
         private System.Windows.Forms.RadioButton rabLine;

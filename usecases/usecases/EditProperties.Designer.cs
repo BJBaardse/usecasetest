@@ -135,7 +135,6 @@
             this.tbAannamen.Name = "tbAannamen";
             this.tbAannamen.Size = new System.Drawing.Size(278, 22);
             this.tbAannamen.TabIndex = 1;
-            this.tbAannamen.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // tbBeschrijving
             // 
@@ -159,7 +158,6 @@
             this.tbResultaat.Name = "tbResultaat";
             this.tbResultaat.Size = new System.Drawing.Size(278, 22);
             this.tbResultaat.TabIndex = 1;
-            this.tbResultaat.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // btnSave
             // 
@@ -169,6 +167,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // EditProperties
             // 

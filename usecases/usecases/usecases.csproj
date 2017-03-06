@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
+    <Compile Include="EditActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditActor.Designer.cs">
+      <DependentUpon>EditActor.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UseCase.cs" />
+    <EmbeddedResource Include="EditActor.resx">
+      <DependentUpon>EditActor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditProperties.resx">
       <DependentUpon>EditProperties.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +99,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="afbeeldingen\8537.png" />
+    <Content Include="afbeeldingen\ellipse.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

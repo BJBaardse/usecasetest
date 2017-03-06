@@ -12,14 +12,27 @@ namespace usecases
 {
     public partial class EditProperties : Form
     {
+        public string naam;
+        public string Samenvatting;
+        public string Actoren;
+        public string Aannamen;
+        public string Beschrijving;
+        public string Uitzonderingen;
+        public string Resultaat;
         public EditProperties()
         {
             InitializeComponent();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-
+            naam = tbNaam.Text;
+            Samenvatting = tbSamenvatting.Text;
+            Actoren = tbActoren.Text;
+            Aannamen = tbAannamen.Text;
+            Beschrijving = tbBeschrijving.Text;
+            Uitzonderingen = tbUitzonderingen.Text;
+            Resultaat = tbResultaat.Text;
         }
     }
 }
