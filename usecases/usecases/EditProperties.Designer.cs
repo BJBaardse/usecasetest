@@ -42,6 +42,7 @@
             this.tbBeschrijving = new System.Windows.Forms.TextBox();
             this.tbUitzonderingen = new System.Windows.Forms.TextBox();
             this.tbResultaat = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -160,11 +161,21 @@
             this.tbResultaat.TabIndex = 1;
             this.tbResultaat.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(341, 423);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 34);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // EditProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 432);
+            this.ClientSize = new System.Drawing.Size(438, 469);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tbUitzonderingen);
             this.Controls.Add(this.tbBeschrijving);
             this.Controls.Add(this.tbResultaat);
@@ -202,5 +213,6 @@
         private System.Windows.Forms.TextBox tbBeschrijving;
         private System.Windows.Forms.TextBox tbUitzonderingen;
         private System.Windows.Forms.TextBox tbResultaat;
+        private System.Windows.Forms.Button btnSave;
     }
 }
